@@ -76,7 +76,12 @@ p.bloco {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: opacity .15s ease, max-height .15s ease;
+}
+
+p.bloco.vis {
+    max-height: 500px;
+    opacity: 1;
 }
 
 article {

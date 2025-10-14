@@ -1,16 +1,16 @@
-let bloco1 = document.getElementById('p1')
-let bloco2 = document.getElementById('p2')
-let bloco3 = document.getElementById('p3')
-let bloco4 = document.getElementById('p4')
-let blocos = 'fechado'
+let aberto = [false, false, false, false];
 
+function verMais(num) {
+    const bloco = document.getElementById(`p${num}`);
+    const img = document.getElementById(`mais${num}`);
 
-function verMais() {
-    if (blocos === 'aberto') {
-        bloco1.style.opacity = '1';
-        bloco1.style.maxHeight = '500px';
+    bloco.classList.toggle('vis');
+
+    if (!aberto[num - 1]) {
+        img.src = 'assets/images/icon-minus.svg';
+        aberto[num - 1] = true;
     } else {
-        bloco1.style.opacity = '1';
-        bloco1.style.maxHeight = '500px';
+        img.src = 'assets/images/icon-plus.svg';
+        aberto[num - 1] = false;
     }
 }
