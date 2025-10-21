@@ -25,7 +25,7 @@ body {
 }
 
 main#p-tela {
-    background-color: hsl(213, 19%, 18%);
+    background-image: linear-gradient(to bottom, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
     color: white;
     max-width: 460px;
     height: 420px;
@@ -49,16 +49,47 @@ p#p1 {
     line-height: 1.5em;
     padding-bottom: 25px;
 }
-
+#valores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 div.valor {
-    display: inline;
+    width: 60px;
+    height: 60px;
     background-color: hsl(217, 12%, 63%, 0.167);
+    color:hsl(217, 12%, 63%);
+    font-weight: 700;
+    font-size: large;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .2s ease, color .2s ease;
+}
+.valor:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(220, 8%, 31%);
+}
+.valor.clicado {
+    color: hsl(25, 97%, 53%);
 }
 
 div#enviar {
     background-color: hsl(25, 97%, 53%);
+    color: black;
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
 }
-
+#enviar:hover {
+    cursor: pointer;
+}
 
 main#s-tela {
     background-color: hsl(213, 19%, 18%);
