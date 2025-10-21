@@ -4,29 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<main>
-  <img src="images/icon-star.svg" alt="Estrela">
+<main id="p-tela">
+  <img src="images/icon-star.svg" alt="Estrela" id="estrela">
   
-  <h1>Como nos saímos?</h1>
+  <h1 id="t1">Como nos saímos?</h1>
   
-  <p>
+  <p id="p1">
     Conte-nos como foi seu atendimento à solicitação de suporte. Agradecemos seu feedback para nos ajudar a melhorar o que temos a oferecer!
   </p>
   
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
+  <div class="valor">1</div>
+  <div class="valor">2</div>
+  <div class="valor">3</div>
+  <div class="valor">4</div>
+  <div class="valor">5</div>
   
-  <div>Submit</div>
+  <div id="enviar" onclick="enviado()">Enviar</div>
 
 </main>
 
-<main>
+<main id="s-tela">
   <img src="images/illustration-thank-you.svg" alt="Obrigado!">
   <p>Você selecionou <!-- Valor Escolhido --> de 5</p>
   <p>Obrigado!</p>
@@ -37,7 +42,9 @@
 
 <div class="attribution">
   Desafio por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Programado por <a href="">Cristhian Elias Sales</a>.
+  Programado por <a href="https://github.com/ESCristhian" target="_blank">Cristhian Elias Sales</a>.
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
