@@ -12,37 +12,39 @@
 </head>
 <body>
 
-<main id="p-tela">
-  <img src="images/icon-star.svg" alt="Estrela" id="estrela">
+<div id="container-mains">
+  <main id="p-tela">
+    <img src="images/icon-star.svg" alt="Estrela" id="estrela">
   
-  <h1 id="t1">Como nos saímos?</h1>
+    <h1 id="t1">Como nos saímos?</h1>
   
-  <p id="p1">
-    Conte-nos como foi seu atendimento à solicitação de suporte. Agradecemos seu feedback para nos ajudar a melhorar o que temos a oferecer!
-  </p>
+    <p id="p1">
+      Conte-nos como foi seu atendimento à solicitação de suporte. Agradecemos seu feedback para nos ajudar a melhorar o que temos a oferecer!
+    </p>
   
-  <div id="valores">
-    <div class="valor" onclick="clicar(0)">1</div>
-    <div class="valor" onclick="clicar(1)">2</div>
-    <div class="valor" onclick="clicar(2)">3</div>
-    <div class="valor" onclick="clicar(3)">4</div>
-    <div class="valor" onclick="clicar(4)">5</div>
-  </div>
-  <div id="enviar" onclick="enviado()">ENVIAR</div>
+    <div id="valores">
+      <div class="valor" onclick="clicar(0)">1</div>
+      <div class="valor" onclick="clicar(1)">2</div>
+      <div class="valor" onclick="clicar(2)">3</div>
+      <div class="valor" onclick="clicar(3)">4</div>
+      <div class="valor" onclick="clicar(4)">5</div>
+    </div>
+    <div id="enviar" onclick="enviado()">ENVIAR</div>
+  
+  </main>
+  
+  <main id="s-tela">
+    <img src="images/illustration-thank-you.svg" alt="Obrigado!" id="img2">
+    <p id="nota">Você selecionou <!-- Valor Escolhido --> de 5</p>
+    <h1 id="h1-2">Obrigado!</h1>
+    <p id="p2">Agradecemos por você ter dedicado seu tempo para nos avaliar. Se precisar de mais suporte,não hesite em entrar em contato!</p>
+  </main>
+</div>
 
-</main>
-
-<main id="s-tela">
-  <img src="images/illustration-thank-you.svg" alt="Obrigado!">
-  <p>Você selecionou <!-- Valor Escolhido --> de 5</p>
-  <p>Obrigado!</p>
-  <p>Agradecemos por você ter dedicado seu tempo para nos avaliar. Se precisar de mais suporte,não hesite em entrar em contato!</p>
-</main>
 
 
-
-<div class="attribution">
-  Desafio por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+<div id="atrib">
+  Desafio por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
   Programado por <a href="https://github.com/ESCristhian" target="_blank">Cristhian Elias Sales</a>.
 </div>
 

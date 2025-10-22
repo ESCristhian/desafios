@@ -7,8 +7,30 @@
     font-family: "Overpass";
 }
 
-#s-tela {
-    display: none;
+#container-mains {
+    position: relative;
+    width: 90%;
+    max-width: 460px;
+    height: 420px;
+}
+
+#p-tela, #s-tela {
+    position: absolute;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#p-tela.oculto, #s-tela.oculto {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+#s-tela.oculto {
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
 }
 
 body {
@@ -25,12 +47,14 @@ body {
 }
 
 main#p-tela {
+    z-index: 1;
     background-image: linear-gradient(to bottom, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
     color: white;
     max-width: 460px;
     height: 420px;
     padding: 25px;
     border-radius: 15px;
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.337);
 }
 
 img#estrela {
@@ -38,6 +62,8 @@ img#estrela {
     margin-bottom: 10px;
     padding: 13px;
     border-radius: 50%;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 h1#t1 {
@@ -66,36 +92,102 @@ div.valor {
     justify-content: center;
     align-items: center;
     transition: background-color .2s ease, color .2s ease;
+    -moz-user-select: none;
+    user-select: none;
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.337);
+    
 }
 .valor:hover {
     cursor: pointer;
-    background-color: white;
-    color: hsl(220, 8%, 31%);
+    background-color: hsl(25, 97%, 53%);
+    color: rgb(30, 30, 30);
 }
 .valor.clicado {
-    color: hsl(25, 97%, 53%);
+    background: white;
+    color: black;
+    transform: scale(1.1);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 div#enviar {
     background-color: hsl(25, 97%, 53%);
-    color: black;
+    color: rgb(28, 27, 27);
     width: 80%;
     margin: auto;
     margin-top: 25px;
     padding: 20px;
     border-radius: 40px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
+    -moz-user-select: none;
+    user-select: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    letter-spacing: .05em;
 }
 #enviar:hover {
     cursor: pointer;
+    background-color: white;
+    transform: scale(1.05);
+    
 }
 
+/* SESSÃO DA SEGUNDA TELA */
+
 main#s-tela {
-    background-color: hsl(213, 19%, 18%);
+    background:hsl(213, 17%, 12%);
     color: white;
     max-width: 460px;
     height: 420px;
     padding: 25px;
     border-radius: 15px;
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.337);
+}
+
+#img2 {
+    display: block;
+    margin: auto;
+    padding: 30px 0px 30px 0px;
+}
+
+#nota {
+    background: hsl(217, 12%, 63%, 0.167);
+    color: hsl(25, 97%, 53%);
+    font-weight: 200;
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 180px;
+    padding: 8px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+#h1-2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#p2 {
+    text-align: center;
+    line-height: 1.5em;
+    font-weight: lighter;
+}
+
+/* SESSÃO DE ATRIBUIÇÃO */
+
+#atrib {
+    font-family: 'work-sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    color: white;
+    background-color: hsl(292, 42%, 14%);
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#atrib a {
+    color: hsl(294, 26%, 72%);
+    text-decoration: none;
 }
