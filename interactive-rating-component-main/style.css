@@ -43,7 +43,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-
+    overflow-y: hidden;
 }
 
 main#p-tela {
@@ -79,6 +79,7 @@ p#p1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 div.valor {
     width: 60px;
@@ -93,7 +94,10 @@ div.valor {
     align-items: center;
     transition: background-color .2s ease, color .2s ease;
     -moz-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.337);
     
 }
@@ -107,6 +111,10 @@ div.valor {
     color: black;
     transform: scale(1.1);
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.valor:focus {
+    outline: none;
 }
 
 div#enviar {
@@ -190,4 +198,12 @@ main#s-tela {
 #atrib a {
     color: hsl(294, 26%, 72%);
     text-decoration: none;
+}
+
+@media screen and (max-width: 420px) {
+    
+    div.valor {
+        width: 50px;
+        height: 50px;
+    }
 }
